@@ -301,7 +301,7 @@ Compiler.prototype._getAlternatives = function() {
                 content: this.mail.text
             };
         }
-        text.contentType = 'text/plain' + (!text.encoding && libmime.isPlainText(text.content) ? '' : '; charset=utf-8');
+        text.contentType = 'text/plain' + (!text.encoding && libmime.isPlainText(text.content) ? '' : '; charset=iso-2022-jp');
     }
 
     if (this.mail.html) {
@@ -312,7 +312,7 @@ Compiler.prototype._getAlternatives = function() {
                 content: this.mail.html
             };
         }
-        html.contentType = 'text/html' + (!html.encoding && libmime.isPlainText(html.content) ? '' : '; charset=utf-8');
+        html.contentType = 'text/html' + (!html.encoding && libmime.isPlainText(html.content) ? '' : '; charset=iso-2022-jp');
     }
 
     [].concat(text || []).concat(html || []).concat(this.mail.alternatives || []).forEach(function(alternative) {
