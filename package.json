@@ -37,7 +37,7 @@
     "sinon": "^1.9.0"
   },
   "dependencies": {
-    "buildmail": "^1.2.0",
+    "buildmail": "git@github.com:thujikun/buildmail.git",
     "hyperquest": "^0.3.0",
     "libmime": "^0.1.5",
     "nodemailer-direct-transport": "^1.0.0",
